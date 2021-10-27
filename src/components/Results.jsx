@@ -29,7 +29,7 @@ const Results = () => {
                         <div key={index} className="md:w-2/5 w-full">
                             <a href={link} target="_blank" rel="noreferrer">
                                 <p className="text-sm">
-                                    {link.length > 30 ? link.substring(0, 30) : link}
+                                    {link?.length > 30 ? link.substring(0, 30) : link}
                                 </p>
                                 <p className="text-lg hover:underline dark:text-blue-300 text-blue-700">
                                     {title}
@@ -44,7 +44,7 @@ const Results = () => {
                 <div className="flex flex-wrap justify-center items-center">
                     {results?.map(({ image, link: { href, title } }) => (
                         <a className="sm:p-3 p-5" href={href} key={title} target="_blank" rel="noreferrer">
-                            <img src={image.src} alt={title} loader="lazy" />
+                            <img src={image?.src} alt={title} loader="lazy" />
                             <p className="w-36 break-words text-sm mt-2">
                                 {title}
                             </p>
@@ -61,12 +61,12 @@ const Results = () => {
                                 <p className="text-lg dark:text-blue-300 text-blue-700">
                                     {title}
                                 </p>
-                                <div className="flex gap-4"> 
-                                    <a href={source?.href} target="_blank" rel="noreferrer">
-                                        {source?.href}
-                                    </a>
-                                </div>
                             </a>
+                            <div className="flex gap-4">
+                                <a href={source?.href} target="_blank" rel="noreferrer" className="hover:underline">
+                                    {source?.href}
+                                </a>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -74,7 +74,7 @@ const Results = () => {
         case '/videos':
             return (
                 <div className="flex flex-wrap justify-center">
-                    {results.map(( video,index ) => (
+                    {results.map((video, index) => (
                         <div key={index} className="p-2">
                             <ReactPlayer url={video.additional_links?.[0].href} controls width="350px" height="200px" />
                         </div>
