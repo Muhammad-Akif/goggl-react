@@ -4,7 +4,7 @@ import { useResultContext } from '../contexts/ResultContextProvider'
 import Links from './Links';
 
 const Search = () => {
-    const [text, setText] = useState('Muhammad-Akif Github')
+    const [text, setText] = useState('Elon Musk')
     const { setSearchTerm } = useResultContext();
     const [debouncedValue] = useDebounce(text, 300);
 
@@ -17,12 +17,12 @@ const Search = () => {
             <input
                 type="text"
                 value={text}
-                className="sm:96 w80 h-10 dark:bg-gray-200 border rounded-full shadow-sm outline-none p-6 text-black hover:shadow-lg"
+                className="sm:96 w-80 h-10 dark:bg-gray-200 border rounded-full shadow-sm outline-none p-6 text-black hover:shadow-lg"
                 placeholder="Search Goggl or Type URL"
                 onChange={ (e) => setText(e.target.value) }
             />
-            { !text && (
-                <button type="button" onClick={ () => setText('') } className="absolute top-1.5 right-4 text-2xl text-gray-500">
+            { text && (
+                <button type="button" onClick={ () => setText('') } className="absolute top-2.5 right-4 text-2xl text-gray-500">
                     X
                 </button>
             )}
