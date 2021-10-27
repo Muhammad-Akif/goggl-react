@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-// import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player';
 import Loading from './Loading'
 
 import { useResultContext } from '../contexts/ResultContextProvider'
@@ -62,7 +62,7 @@ const Results = () => {
                                     {title}
                                 </p>
                                 <div className="flex gap-4"> 
-                                    <a href={source?.href} target="_blank" rel="noreferrer" className="hover:underline">
+                                    <a href={source?.href} target="_blank" rel="noreferrer">
                                         {source?.href}
                                     </a>
                                 </div>
@@ -72,7 +72,15 @@ const Results = () => {
                 </div>
             );
         case '/videos':
-            return 'videos';
+            return (
+                <div className="flex flex-wrap justify-center">
+                    {results.map(( video,index ) => (
+                        <div key={index} className="p-2">
+                            <ReactPlayer url={video.additional_links?.[0].href} controls width="350px" height="200px" />
+                        </div>
+                    ))}
+                </div>
+            );
         default:
             return 'Error';
     }

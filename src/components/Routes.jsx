@@ -5,12 +5,14 @@ import Results from './Results'
 const Routes = () => {
     return (
         <div className="p-4">
-            <Route exact path="/">
-                <Redirect to="/search" />
-            </Route>
-            <Route exact path={['/search', '/images', '/news', '/videos']}>
-                <Results />
-            </Route>
+            <Switch>
+                <Route exact path="/">
+                    <Redirect to="/search" />
+                </Route>
+                <Route exact path={['/search', '/images', '/news', '/videos']}>
+                    <Results />
+                </Route>
+            </Switch>
         </div>
     )
 }
