@@ -1,10 +1,14 @@
-# Getting Started
+# Goggle Search Engine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![goggle.png](https://i.postimg.cc/YCsw4qSh/goggle.png)](https://postimg.cc/68nPgKnX)
 
-## Available Scripts
+# Introduction
+This is a code repository for the corresponding video tutorial.
 
-In the project directory, you can run:
+In this video, we will create a Google Clone app. We're going to use React and Goole Search API powered by https://rapidapi.com.
 
-### `yarn start`
+By the end of this video, you will become the master of working with APIs.
 
+# Setup:
+
+`run npm i && npm start` to start the development server
