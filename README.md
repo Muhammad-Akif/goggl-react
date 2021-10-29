@@ -4,7 +4,7 @@
 
 # Introduction
 
-Project is Known as Goggle Live is a Search Engine Like Google use React and Google Search API powered by https://rapidapi.com.
+Project is Known as Goggle [Live](https://goggleme.netlify.app) is a Search Engine Like Google use React and Google Search API powered by https://rapidapi.com.
 It has different tabs like Search, News, Images, & Videos, where you can get the results including all these tabs...
 
 # Setup:
