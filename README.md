@@ -1,4 +1,4 @@
-# Goggle Search Engine
+# Goggl Search Engine
 
 [![goggle.png](https://i.postimg.cc/YCsw4qSh/goggle.png)](https://postimg.cc/68nPgKnX)
 
